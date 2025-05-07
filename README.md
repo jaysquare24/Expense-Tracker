@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# My Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My Expense Tracker is a React and Redux-based application that helps users manage their expenses effectively. Users can add, view, and delete transactions, manage budgets for specific categories, and track their remaining funds in real-time.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Transactions**: Users can add new transactions with details such as category, description, and amount.
+- **View Transactions**: Displays a list of all transactions with their details.
+- **Delete Transactions**: Allows users to remove transactions from the list.
+- **Manage Budgets**: Users can set and edit budgets for specific categories.
+- **Track Expenses**: Automatically calculates total expenses for each category.
+- **Funds Remaining Indicator**: Displays remaining funds for each category with visual cues (positive or negative).
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Budget Component
 
-### `npm test`
+The component is a key part of the Expense Tracker App. It allows users to manage their budgets for specific categories, track expenses, and view remaining funds in real-time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Features
 
-### `npm run build`
+- **Edit Budget Amount**: Users can update the budget amount for a specific category.
+- **Track Expenses**: Automatically calculates the total expenses for the category.
+- **Funds Remaining Indicator**: Displays the remaining funds for the category with visual cues (positive or negative).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Transaction Component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The component is a React functional component used in the application. It is responsible for rendering individual transaction items and providing functionality to delete a transaction.
 
-### `npm run eject`
+#### Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Displays transaction details including:
+  - Amount
+  - Category
+  - Description
+- Provides a delete button to remove a transaction from the list.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Transaction Form Component
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The component provides a form for users to add new transactions to the application.
 
-## Learn More
+#### Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Allows users to input transaction details including:
+  - Category
+  - Description
+  - Amount
+- Dispatches an action to add the transaction to the Redux store.
+- Resets the form fields after submission.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+### Transaction List Component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The component is responsible for rendering a list of transactions.
 
-### Analyzing the Bundle Size
+#### Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Displays a list of transactions.
+- Dynamically renders each transaction.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies Used
 
-### Advanced Configuration
+- **React**: For building the user interface.
+- **Redux**: For state management.
+- **UUID**: For generating unique IDs for transactions.
+- **CSS**: For styling the components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Usage
 
-### `npm run build` fails to minify
+1. Add a new transaction using the form.
+2. View the list of transactions in the transaction list.
+3. Delete transactions as needed.
+4. Manage budgets for specific categories and track remaining funds.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## File Structure
+
+- `src/components/Transaction.js`: Renders individual transactions.
+- `src/components/TransactionForm.js`: Provides a form to add new transactions.
+- `src/components/TransactionList.js`: Displays a list of transactions.
+- `src/components/Budget.js`: Manages budgets and tracks expenses.
+
+---
+
